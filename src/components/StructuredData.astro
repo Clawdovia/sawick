@@ -26,14 +26,14 @@ if (type === "BlogPosting") {
       name: "Sawick",
       logo: {
         "@type": "ImageObject",
-        url: "https://sawick.me/peter-avatar.jpg",
+        url: "https://sawick.me/sawick-avatar.jpg",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": data.url,
     },
-    image: data.ogImage || "https://sawick.me/peter-avatar.jpg",
+    image: data.ogImage || "https://sawick.me/sawick-avatar.jpg",
     articleSection: data.tags?.[0] || "Technology",
     keywords: data.tags?.join(", ") || "",
     wordCount: data.wordCount,
@@ -45,7 +45,7 @@ if (type === "BlogPosting") {
     "@type": "Person",
     name: "Sawick",
     url: "https://sawick.me",
-    image: "https://sawick.me/peter-avatar.jpg",
+    image: "https://sawick.me/sawick-avatar.jpg",
     sameAs: [
       "https://github.com/sawick_",
       "https://twitter.com/sawick_",

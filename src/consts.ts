@@ -36,7 +36,7 @@ export const SITE: Site = {
   profile: "https://sawick.me/about",
   desc: "Building AI autonomous cognitive layers. Three machines, three cognitive layers. Documented in public, in real time.",
   title: "Sawick",
-  ogImage: "peter-avatar.jpg",
+  ogImage: "sawick-avatar.jpg",
   lightAndDarkMode: true,
   postPerIndex: 10,
   postPerPage: 10,
