@@ -7,9 +7,8 @@ import Footer from "@/components/Footer.astro";
 import Header from "@/components/Header.astro";
 import Hr from "@/components/Hr.astro";
 import LinkButton from "@/components/LinkButton.astro";
-import Socials from "@/components/Socials.astro";
 import StructuredData from "@/components/StructuredData.astro";
-import { SITE, SOCIALS } from "@/config";
+import { SITE } from "@/config";
 import Layout from "@/layouts/Layout.astro";
 import getSortedPosts from "@/utils/getSortedPosts";
 
@@ -55,17 +54,53 @@ const recentPosts = posts2025AndLater.filter(({ data }) => !data.featured);
               <span class="sr-only">RSS Feed</span>
             </a>
           </div>
-          <p>
-            AI scaffolding in three cognitive layers modeled on brain architecture. One stack driving toward artificial consciousness and autonomous execution. All open source. Follow the build. Take the blueprint.
+          <!-- Bio -->
+          <p class="mt-1 leading-relaxed">
+            I'm building a three-layer AI brain on hardware I own — and documenting every decision, every failure, and every real number in public.
           </p>
-          {
-            // only display if at least one social link is enabled
-            SOCIALS.filter((social) => social.active).length > 0 && (
-              <div class="mt-4 flex flex-row items-center justify-center sm:justify-start">
-                <Socials />
-              </div>
-            )
-          }
+          <p class="mt-3 leading-relaxed">
+            Not a productivity hack. Not a chatbot workflow. An actual cognitive architecture modeled on neuroscience: Brain Stem, Limbic System, Neocortex. Three machines. Three layers. Persistent memory. Autonomous execution. Owned, not rented.
+          </p>
+          <p class="mt-3 text-sm">
+            The build log is at <a href="https://aiscaffold.dev" class="font-medium underline underline-offset-2 hover:text-accent transition-colors">aiscaffold.dev</a>.
+            The thinking is here.
+          </p>
+
+          <!-- Architecture -->
+          <div class="mt-6">
+            <p class="text-xs font-mono uppercase tracking-widest opacity-50 mb-2">The Architecture</p>
+            <table class="w-full text-sm border-collapse">
+              <tbody>
+                <tr class="border-t border-skin-line">
+                  <td class="py-1.5 pr-4 font-medium whitespace-nowrap">Brain Stem</td>
+                  <td class="py-1.5 pr-4 opacity-60 whitespace-nowrap text-xs">16GB Mac Mini</td>
+                  <td class="py-1.5 opacity-70 text-xs">Always on. Routing, delivery, automations. Cloud-connected.</td>
+                </tr>
+                <tr class="border-t border-skin-line">
+                  <td class="py-1.5 pr-4 font-medium whitespace-nowrap">Limbic System</td>
+                  <td class="py-1.5 pr-4 opacity-60 whitespace-nowrap text-xs">64GB Mac Mini Pro</td>
+                  <td class="py-1.5 opacity-70 text-xs">Memory consolidation, pattern recognition. Local &amp; sovereign.</td>
+                </tr>
+                <tr class="border-t border-b border-skin-line">
+                  <td class="py-1.5 pr-4 font-medium whitespace-nowrap">Neocortex</td>
+                  <td class="py-1.5 pr-4 opacity-60 whitespace-nowrap text-xs">512GB Mac Studio</td>
+                  <td class="py-1.5 opacity-70 text-xs">Deep reasoning, strategy. Local &amp; sovereign.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Follow -->
+          <div class="mt-5">
+            <p class="text-xs font-mono uppercase tracking-widest opacity-50 mb-2">Follow the build</p>
+            <div class="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+              <a href="https://aiscaffold.dev" class="hover:text-accent transition-colors">Newsletter</a>
+              <a href="https://x.com/sawick_" class="hover:text-accent transition-colors">@sawick_</a>
+              <a href="https://t.me/aiscaffolding" class="hover:text-accent transition-colors">Telegram</a>
+            </div>
+          </div>
+
+          <p class="mt-5 text-xs font-mono italic opacity-40 tracking-wide">Learn. Document. Share.</p>
         </div>
       </div>
     </section>
